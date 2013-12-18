@@ -1,0 +1,7 @@
+<?php
+	
+	class ValidateData {
+
+	} // ValidateData
+
+?>
