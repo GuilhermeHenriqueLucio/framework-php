@@ -6,6 +6,7 @@
 	*/
 	class AutoLoad {
 
+		// Ajustando path para a pasta skins correta
 		private $_skin = 'app/skins/';
 
 		function __construct () {
