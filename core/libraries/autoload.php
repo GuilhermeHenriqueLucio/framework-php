@@ -19,6 +19,8 @@
 		
 		function __construct () {
 			
+			// TODO - Função automatica, base para todo o site
+			
 			try {
 				
 				// Inicializando a classe Redirect
