@@ -6,7 +6,7 @@
 		private $folder = 'core/logs/';
 		
 		function __construct () {
-			$this->writeLog("[ERROR] Teste");
+			//$this->writeLog("[ERROR] Teste");
 		}
 		
 		public function writeLog ($msg) {

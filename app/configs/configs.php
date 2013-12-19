@@ -4,8 +4,8 @@
 	* 	Definindo o path base para o site
 	*	Exemplo: http://localhost/site_exemplo/
 	*/
-	$GLOBALS['__CONFIGS__']['PATH'] = '';
-	
+	$GLOBALS['__CONFIGS__']['PATH'] 	= '';
+	$GLOBALS['__CONFIGS__']['INDEX']	= 'http://localhost/admin/';
 	/**
 	*	Setando qual a skin eu estou usando para o projeto
 	*/
@@ -29,4 +29,5 @@
 	$_DATABASE	= $__CONFIGS['DATABASE'];
 	$_CLASSES 	= $__CONFIGS['AUTOLOAD'];
 	$_SKIN		= $__CONFIGS['SKIN'];
+	$_INDEX		= $__CONFIGS['INDEX'];
 ?>

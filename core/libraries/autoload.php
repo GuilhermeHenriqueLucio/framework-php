@@ -4,19 +4,32 @@
 	*	Classe que será chamada todas as vezes que a página carregar
 	*	
 	*/
+	
+	// Includando a classe redirect
+	include_once 'core/libraries/Redirects.php';
+	
 	class AutoLoad {
 
 		// Ajustando path para a pasta skins correta
 		private $_skin 	= 'app/skins/';
 		private $_error	= false;
+		private $_logger; 
+		private $_redir;
 		
 		function __construct () {
 			
 			try {
-			
+				
+				// Inicializando a classe Redirect
+				$this->_redir = new Redirects();
+				
 				// Carregando as configurações base para todo o site
 				include_once 'app/configs/configs.php';
-	
+				
+				// Carregando Logger
+				include_once 'core/libraries/Logger.php';
+				$this->_logger = new Logger();
+				
 				// Iniciando classes do autoload, setados na página de configuração
 				if ($_CLASSES != NULL) :
 				
@@ -30,7 +43,7 @@
 							include_once 'core/libraries/'.$value.'.php';
 							$$value = new $value();
 						else:
-							throw new Exception("Erro ao carregar biblioteca", 1);		
+							throw new Exception("Erro ao carregar biblioteca ".$value, 1);		
 						endif;	
 						
 	
@@ -43,18 +56,19 @@
 
 			}
 			catch (Exception $e) {
-				echo $e->getMessage();
-				$this->_error = false;			// Setando erro no AutoLoad
+				$this->_logger->writeLog("[ERROR] ".$e->getMessage());
+				$this->_error = true;			// Setando erro no AutoLoad
+				$this->_redir->doRedirect($_INDEX.'error/500');
 			}
 
 		} // __construct
 
-		public function callIndex () {
+		public function callPage ($url) {
 
-			// TODO - Chamar a index.php da skin
+			// TODO - Chamar a página php da skin de acordo com a URL
 			
 			// Carregar página somente se não houve erro ao executar o AutoLoad
-			if ($this->_error) :
+			if (!$this->_error) :
 				include_once $this->_skin.'index.php';
 			endif;
 			
@@ -79,7 +93,13 @@
 			include_once $this->_skin.$file.'.'.$ext;
 
 		} // load
-
+		
+		public function getParametersURL ($url) {
+			
+			return explode('/',$url);
+			
+		} // getParametersURL
+		
 	} // AutoLoad
 
 ?>
