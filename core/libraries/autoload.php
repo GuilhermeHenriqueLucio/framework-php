@@ -7,37 +7,62 @@
 	class AutoLoad {
 
 		// Ajustando path para a pasta skins correta
-		private $_skin = 'app/skins/';
-
+		private $_skin 	= 'app/skins/';
+		private $_error	= false;
+		
 		function __construct () {
 			
-			// Carregando as configurações base para todo o site
-			include_once 'app/configs/configs.php';
-
-			// Iniciando classes do autoload, setados na página de configuração
-			if ($_CLASSES != NULL) :
+			try {
 			
-				foreach ($_CLASSES as $key => $value) :
-					// Dando load nas classes necessárias, passados pelo usuário
-					include_once 'app/controllers/'.$value.'.php';
-					$$value = new $value();
+				// Carregando as configurações base para todo o site
+				include_once 'app/configs/configs.php';
+	
+				// Iniciando classes do autoload, setados na página de configuração
+				if ($_CLASSES != NULL) :
+				
+					foreach ($_CLASSES as $key => $value) :
+						
+						// Dando load nas classes necessárias, passados pelo usuário	
+						if (file_exists('app/controllers/'.$value.'.php')) :
+							include_once 'app/controllers/'.$value.'.php';
+							$$value = new $value();
+						elseif (file_exists('core/libraries/'.$value.'.php')) :
+							include_once 'core/libraries/'.$value.'.php';
+							$$value = new $value();
+						else:
+							throw new Exception("Erro ao carregar biblioteca", 1);		
+						endif;	
+						
+	
+					endforeach;
+				
+				endif;
+	
+				//Setando qual é a estrutura de pasta até chegar na skin
+				$this->_skin .= $_SKIN.'/';
 
-				endforeach;
-			
-			endif;
-
-			//Includando a index da skin
-			$this->_skin .= $_SKIN.'/';
+			}
+			catch (Exception $e) {
+				echo $e->getMessage();
+				$this->_error = false;			// Setando erro no AutoLoad
+			}
 
 		} // __construct
 
-		function callIndex () {
+		public function callIndex () {
 
-			include_once $this->_skin.'index.php';
-
+			// TODO - Chamar a index.php da skin
+			
+			// Carregar página somente se não houve erro ao executar o AutoLoad
+			if ($this->_error) :
+				include_once $this->_skin.'index.php';
+			endif;
+			
 		} // callIndex
 
-		function loadController ($class) {
+		public function loadController ($class) {
+			
+			// TODO - Carregar um Controller personalizado da SKIN, que foi criado pelo usuário 
 			
 			foreach ($class as $key => $value) :
 				// Dando load nas classes necessárias, passados pelo usuário
@@ -47,9 +72,10 @@
 		
 		}
 
-		function load ($file,$ext = '.php') {
+		public function load ($file,$ext = '.php') {
 
-			// Dando load nas classes necessárias, passados pelo usuário
+			// TODO - Carregar html, php, scripts, css dentro de uma página da SKIN. 
+			// OBS: Não é criar a tag <script> e sim dar um "include_once" na página
 			include_once $this->_skin.$file.'.'.$ext;
 
 		} // load

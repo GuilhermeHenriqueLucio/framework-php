@@ -1,6 +1,10 @@
 <?php
 	// Iniciando classes automaticamente
-	include_once 'core/libraries/autoload.php';
+	include_once 'core/libraries/AutoLoad.php';
 	$GLOBALS['_site'] = new AutoLoad;
-	$GLOBALS['_site']->callIndex();
+	
+	if ($GLOBALS['_site']) :
+		$GLOBALS['_site']->callIndex();
+	endif;
+	
 ?>

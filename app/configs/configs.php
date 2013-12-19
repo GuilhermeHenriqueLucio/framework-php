@@ -22,7 +22,7 @@
 	*	Setando classes que farão parte do autoload
 	*	Exemplo: array("exampleClass")
 	*/
-	$GLOBALS['__CONFIGS__']['AUTOLOAD'] = array();
+	$GLOBALS['__CONFIGS__']['AUTOLOAD'] = array("Logger");
 
 	// Setando variáveis curtas
 	$__CONFIGS 	= $GLOBALS['__CONFIGS__'];
