@@ -15,6 +15,7 @@
 		private $_error	= false;
 		private $_logger; 
 		private $_redir;
+		private $_DAO;
 		
 		function __construct () {
 			
@@ -29,6 +30,15 @@
 				// Carregando Logger
 				include_once 'core/libraries/Logger.php';
 				$this->_logger = new Logger();
+				
+				// Verificando se o banco de dados será utilizado
+				if ($_DATABASE['flag']) :
+					
+					// Carregando DAO
+					include_once 'core/models/DAO.php';
+					$this->_DAO = new DAO($_DATABASE['user'],$_DATABASE['pass'],$_DATABASE['db']);
+				
+				endif;
 				
 				// Iniciando classes do autoload, setados na página de configuração
 				if ($_CLASSES != NULL) :
@@ -99,6 +109,7 @@
 			return explode('/',$url);
 			
 		} // getParametersURL
+		
 		
 	} // AutoLoad
 

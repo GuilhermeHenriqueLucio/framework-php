@@ -1,4 +1,6 @@
 RewriteEngine On 
 RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?url=$1
+RewriteRule ^((?!error\/).)*$ index.php?url=$1
+RewriteRule ^(error\/500)$ app/errors/500.html
+RewriteRule ^(error\/404)$ app/errors/404.html

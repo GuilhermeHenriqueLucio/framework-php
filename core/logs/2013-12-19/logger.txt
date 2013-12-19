@@ -6,3 +6,66 @@
 [2013-12-19 12:51:03][ERROR] Erro ao carregar biblioteca Another
 [2013-12-19 13:01:29][ERROR] Erro ao carregar biblioteca Another
 [2013-12-19 13:02:19][ERROR] Erro ao carregar biblioteca Another
+[2013-12-19 14:51:28][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:30][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:32][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:34][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:36][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:38][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:40][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:42][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:44][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:46][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:48][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:50][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:52][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:54][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:56][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:51:58][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:52:00][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:52:02][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:52:04][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:52:06][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:52:08][ERROR] SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+
+[2013-12-19 14:53:26][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:28][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:30][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:32][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:34][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:36][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:38][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:40][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:42][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:44][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:46][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:49][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:51][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:53][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:55][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:57][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:53:59][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:54:01][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:54:03][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:54:05][ERROR] Erro ao conectar ao banco de dados
+[2013-12-19 14:54:07][ERROR] Erro ao conectar ao banco de dados

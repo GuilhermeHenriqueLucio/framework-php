@@ -1,33 +1,22 @@
 <?php
 	
-	/** 
-	* 	Definindo o path base para o site
-	*	Exemplo: http://localhost/site_exemplo/
-	*/
-	$GLOBALS['__CONFIGS__']['PATH'] 	= '';
-	$GLOBALS['__CONFIGS__']['INDEX']	= 'http://localhost/admin/';
-	/**
-	*	Setando qual a skin eu estou usando para o projeto
-	*/
-	$GLOBALS['__CONFIGS__']['SKIN'] = 'default';
+	// Definindo o path base para o site
+	// Exemplo: http://localhost/site_exemplo/
+	$_PATH 	= '';
+	$_INDEX	= 'http://localhost/admin/';
 
-	/**
-	*	Setando configurações para o banco de dados
-	*	Nome do banco e senha
-	*/
-	$GLOBALS['__CONFIGS__']['DATABASE']['NAME'] = '';
-	$GLOBALS['__CONFIGS__']['DATABASE']['PASS'] = '';
+	// Setando qual a skin eu estou usando para o projeto
+	$_SKIN 	= 'default';
 
-	/**
-	*	Setando classes que farão parte do autoload
-	*	Exemplo: array("exampleClass")
-	*/
-	$GLOBALS['__CONFIGS__']['AUTOLOAD'] = array("Logger");
+	// Setando configurações para o banco de dados
+	// Flag True significa usar o banco, FLAG false não usar
+	// Usuário , senha e nome do banco
+	$_DATABASE['flag'] 	= false;
+	$_DATABASE['user'] 	= '';
+	$_DATABASE['pass'] 	= '';
+	$_DATABASE['db'] 	= '';
 
-	// Setando variáveis curtas
-	$__CONFIGS 	= $GLOBALS['__CONFIGS__'];
-	$_DATABASE	= $__CONFIGS['DATABASE'];
-	$_CLASSES 	= $__CONFIGS['AUTOLOAD'];
-	$_SKIN		= $__CONFIGS['SKIN'];
-	$_INDEX		= $__CONFIGS['INDEX'];
+	// Setando classes que farão parte do autoload
+	// Exemplo: array("exampleClass")
+	$_CLASSES 	= array("Logger");
 ?>
